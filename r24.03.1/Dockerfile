@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -23,6 +23,6 @@ ENV MESASDK_ROOT=/mesa/mesasdk MESA_DIR=/mesa/mesa
 RUN echo 'source $MESASDK_ROOT/bin/mesasdk_init.sh' >> $HOME/.profile
 # install mesa
 WORKDIR $MESA_DIR
-RUN source $HOME/.profile && ./install && /mesa/mist.sh
+RUN source $HOME/.profile && ./install
 
 WORKDIR /mesa/work

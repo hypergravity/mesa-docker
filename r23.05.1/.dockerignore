@@ -1,0 +1,5 @@
+.dockerignore
+Dockerfile
+Makefile
+log
+r*

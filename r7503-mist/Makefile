@@ -1,4 +1,7 @@
-build:
+clean:
+	rm -rf ./log
+
+build: clean
 	docker build . -t mesa:7503-mist --no-cache --progress plain > ./log
 
 run:
